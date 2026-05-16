@@ -1,0 +1,529 @@
+{
+  "Name": "Default",
+  "UserPreferences": {
+    "ConfigVersion": 1.0,
+    "ToggleStateKey": "End",
+    "AutoBuffOrder": [],
+    "StopBuffsCity": false,
+    "SoundEnabled": false,
+    "AutoOffOverweight": false,
+    "AutoOffKey1": 0,
+    "AutoOffKey2": 0,
+    "AutoOffKillClient": false,
+    "SwitchAmmo": false,
+    "Ammo1Key": 0,
+    "Ammo2Key": 0,
+    "AutoOffTime": 1
+  },
+  "SkillSpammer": {
+    "SpammerEntries": {},
+    "SpammerDelay": 50
+  },
+  "AutopotHP": {
+    "HPSlots": [
+      {
+        "Id": 1,
+        "Key": 0,
+        "HPPercent": 0,
+        "Enabled": false
+      },
+      {
+        "Id": 2,
+        "Key": 0,
+        "HPPercent": 0,
+        "Enabled": false
+      },
+      {
+        "Id": 3,
+        "Key": 0,
+        "HPPercent": 0,
+        "Enabled": false
+      },
+      {
+        "Id": 4,
+        "Key": 0,
+        "HPPercent": 0,
+        "Enabled": false
+      },
+      {
+        "Id": 5,
+        "Key": 0,
+        "HPPercent": 0,
+        "Enabled": false
+      }
+    ],
+    "Delay": 50,
+    "StopOnCriticalInjury": false,
+    "ActionName": "AutopotHP"
+  },
+  "AutopotSP": {
+    "SPSlots": [
+      {
+        "Id": 1,
+        "Key": 0,
+        "SPPercent": 0,
+        "Enabled": false
+      },
+      {
+        "Id": 2,
+        "Key": 0,
+        "SPPercent": 0,
+        "Enabled": false
+      },
+      {
+        "Id": 3,
+        "Key": 0,
+        "SPPercent": 0,
+        "Enabled": false
+      },
+      {
+        "Id": 4,
+        "Key": 0,
+        "SPPercent": 0,
+        "Enabled": false
+      },
+      {
+        "Id": 5,
+        "Key": 0,
+        "SPPercent": 0,
+        "Enabled": false
+      }
+    ],
+    "Delay": 50,
+    "ActionName": "AutopotSP"
+  },
+  "SkillTimer": {
+    "skillTimer": {
+      "1": {
+        "Key": 0,
+        "AltKey": false,
+        "Enabled": false,
+        "Delay": 1000,
+        "ClickMode": 0
+      },
+      "2": {
+        "Key": 0,
+        "AltKey": false,
+        "Enabled": false,
+        "Delay": 1000,
+        "ClickMode": 0
+      },
+      "3": {
+        "Key": 0,
+        "AltKey": false,
+        "Enabled": false,
+        "Delay": 1000,
+        "ClickMode": 0
+      },
+      "4": {
+        "Key": 0,
+        "AltKey": false,
+        "Enabled": false,
+        "Delay": 1000,
+        "ClickMode": 0
+      },
+      "5": {
+        "Key": 0,
+        "AltKey": false,
+        "Enabled": false,
+        "Delay": 1000,
+        "ClickMode": 0
+      },
+      "6": {
+        "Key": 0,
+        "AltKey": false,
+        "Enabled": false,
+        "Delay": 1000,
+        "ClickMode": 0
+      },
+      "7": {
+        "Key": 0,
+        "AltKey": false,
+        "Enabled": false,
+        "Delay": 1000,
+        "ClickMode": 0
+      },
+      "8": {
+        "Key": 0,
+        "AltKey": false,
+        "Enabled": false,
+        "Delay": 1000,
+        "ClickMode": 0
+      },
+      "9": {
+        "Key": 0,
+        "AltKey": false,
+        "Enabled": false,
+        "Delay": 1000,
+        "ClickMode": 0
+      },
+      "10": {
+        "Key": 0,
+        "AltKey": false,
+        "Enabled": false,
+        "Delay": 1000,
+        "ClickMode": 0
+      }
+    }
+  },
+  "AutobuffSkill": {
+    "ActionName": "AutobuffSkill",
+    "BuffMapping": {},
+    "Delay": 50
+  },
+  "AutobuffItem": {
+    "buffMapping": {},
+    "ActionName": "AutobuffItem",
+    "Delay": 50,
+    "ConsecutiveErrorCount": 0,
+    "LastSuccessfulRead": "2026-05-15T22:36:37.5818131-07:00"
+  },
+  "StatusRecovery": {
+    "Keys": {
+      "Panacea": 0,
+      "RoyalJelly": 0,
+      "GreenPotion": 0
+    },
+    "Delay": 100
+  },
+  "DebuffsRecovery": {
+    "BuffMapping": {},
+    "Delay": 50
+  },
+  "SongMacro": {
+    "ActionName": "SongMacro",
+    "SongRows": [
+      {
+        "Id": 1,
+        "TriggerKey": 0,
+        "DaggerKey": 0,
+        "InstrumentKey": 0,
+        "Delay": 100,
+        "SongSequence": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "Id": 2,
+        "TriggerKey": 0,
+        "DaggerKey": 0,
+        "InstrumentKey": 0,
+        "Delay": 100,
+        "SongSequence": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "Id": 3,
+        "TriggerKey": 0,
+        "DaggerKey": 0,
+        "InstrumentKey": 0,
+        "Delay": 100,
+        "SongSequence": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "Id": 4,
+        "TriggerKey": 0,
+        "DaggerKey": 0,
+        "InstrumentKey": 0,
+        "Delay": 100,
+        "SongSequence": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "Id": 1,
+        "TriggerKey": 0,
+        "DaggerKey": 0,
+        "InstrumentKey": 0,
+        "Delay": 100,
+        "SongSequence": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "Id": 2,
+        "TriggerKey": 0,
+        "DaggerKey": 0,
+        "InstrumentKey": 0,
+        "Delay": 100,
+        "SongSequence": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "Id": 3,
+        "TriggerKey": 0,
+        "DaggerKey": 0,
+        "InstrumentKey": 0,
+        "Delay": 100,
+        "SongSequence": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "Id": 4,
+        "TriggerKey": 0,
+        "DaggerKey": 0,
+        "InstrumentKey": 0,
+        "Delay": 100,
+        "SongSequence": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "MacroSwitch": {
+    "ActionName": "MacroSwitch",
+    "ChainConfigs": [
+      {
+        "id": 1,
+        "TriggerKey": 0,
+        "macroEntries": [
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "TriggerKey": 0,
+        "macroEntries": [
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "TriggerKey": 0,
+        "macroEntries": [
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "TriggerKey": 0,
+        "macroEntries": [
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          },
+          {
+            "Key": 0,
+            "Delay": 100,
+            "ClickMode": 0
+          }
+        ]
+      }
+    ]
+  },
+  "TransferHelper": {
+    "ActionName": "TransferHelper",
+    "TransferKey": 0
+  },
+  "ATKDEFMode": {
+    "EquipConfigs": [
+      {
+        "id": 1,
+        "KeySpammerDelay": 100,
+        "SwitchDelay": 100,
+        "KeySpammer": 0,
+        "KeySpammerWithClick": true,
+        "DefKeys": {},
+        "AtkKeys": {}
+      },
+      {
+        "id": 2,
+        "KeySpammerDelay": 100,
+        "SwitchDelay": 100,
+        "KeySpammer": 0,
+        "KeySpammerWithClick": true,
+        "DefKeys": {},
+        "AtkKeys": {}
+      }
+    ]
+  }
+}
