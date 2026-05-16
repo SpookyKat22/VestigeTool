@@ -1,0 +1,34 @@
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\OSRO Tools.csproj.AssemblyReference.cache
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\bin\Debug\OSRO Tools.exe.config
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\bin\Debug\OSRO Tools.exe
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\bin\Debug\OSRO Tools.pdb
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Forms.AutoOffForm.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Forms.AutopotSPForm.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Forms.AutopotHPForm.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Forms.CharacterInfo.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Forms.DialogOK.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Forms.DialogConfirm.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Forms.DialogConfirmDelete.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Forms.DialogInput.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Forms.SkillSpammerForm.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Forms.ATKDEFForm.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Forms.Container.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Forms.SongsForm.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Forms.MacroSwitchForm.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Forms.SettingsForm.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Forms.ProfilesForm.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Forms.ResourceLoader.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Forms.SkillTimerForm.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Forms.DebuffsForm.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Forms.AutobuffItemForm.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Forms.StateSwitchForm.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Forms.TransferHelperForm.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Properties.Resources.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Resources.Media.Icons.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\_ORTools.Resources.Media.Sounds.resources
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\OSRO Tools.csproj.GenerateResource.cache
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\OSRO Tools.csproj.CoreCompileInputs.cache
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\OSRO Tools.csproj.Fody.CopyLocal.cache
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\OSRO Tools.csproj.Fody.RuntimeCopyLocal.cache
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\OSRO Tools.exe
+C:\Users\richi\Downloads\4RTools-OSRO-main (1)\4RTools-OSRO-main\obj\Debug\OSRO Tools.pdb

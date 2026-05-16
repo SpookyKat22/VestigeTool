@@ -1,0 +1,169 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\richi\\Downloads\\4RTools-OSRO-main (1)\\4RTools-OSRO-main\\OSRO Tools.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\richi\\Downloads\\4RTools-OSRO-main (1)\\4RTools-OSRO-main\\OSRO Tools.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\richi\\Downloads\\4RTools-OSRO-main (1)\\4RTools-OSRO-main\\OSRO Tools.csproj",
+        "projectName": "OSRO Tools",
+        "projectPath": "C:\\Users\\richi\\Downloads\\4RTools-OSRO-main (1)\\4RTools-OSRO-main\\OSRO Tools.csproj",
+        "packagesPath": "C:\\Users\\richi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\richi\\Downloads\\4RTools-OSRO-main (1)\\4RTools-OSRO-main\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "C:\\Users\\richi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net481"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net481": {
+            "framework": "net481",
+            "projectReferences": {}
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net481": {
+          "framework": "net481",
+          "dependencies": {
+            "Costura.Fody": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Fody": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.9.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.Linq": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Linq.Expressions": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.ObjectModel": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Reflection": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Reflection.Extensions": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Reflection.Primitives": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Resources.ResourceManager": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Runtime.CompilerServices.Unsafe": {
+              "target": "Package",
+              "version": "[6.1.2, )"
+            },
+            "System.Runtime.Extensions": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            },
+            "System.Runtime.Handles": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Runtime.InteropServices": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Runtime.InteropServices.RuntimeInformation": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Runtime.Numerics": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Runtime.WindowsRuntime.UI.Xaml": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Text.Encoding": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Text.Encoding.Extensions": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Text.RegularExpressions": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            },
+            "System.Threading": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Threading.Tasks": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Threading.Timer": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.ValueTuple": {
+              "target": "Package",
+              "version": "[4.6.1, )"
+            },
+            "System.Xml.ReaderWriter": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            },
+            "System.Xml.XDocument": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
