@@ -1,529 +1,149 @@
 {
   "Name": "Default",
   "UserPreferences": {
-    "ConfigVersion": 1.0,
-    "ToggleStateKey": "End",
-    "AutoBuffOrder": [],
-    "StopBuffsCity": false,
-    "SoundEnabled": false,
-    "AutoOffOverweight": false,
-    "AutoOffKey1": 0,
-    "AutoOffKey2": 0,
-    "AutoOffKillClient": false,
-    "SwitchAmmo": false,
-    "Ammo1Key": 0,
-    "Ammo2Key": 0,
-    "AutoOffTime": 1
+    "toggleStateKey": "End"
   },
-  "SkillSpammer": {
-    "SpammerEntries": {},
-    "SpammerDelay": 50
+  "AHK": {
+    "AhkEntries": {},
+    "AhkDelay": 10,
+    "mouseFlick": false,
+    "noShift": false,
+    "ahkMode": "ahkCompatibility"
   },
-  "AutopotHP": {
-    "HPSlots": [
-      {
-        "Id": 1,
-        "Key": 0,
-        "HPPercent": 0,
-        "Enabled": false
-      },
-      {
-        "Id": 2,
-        "Key": 0,
-        "HPPercent": 0,
-        "Enabled": false
-      },
-      {
-        "Id": 3,
-        "Key": 0,
-        "HPPercent": 0,
-        "Enabled": false
-      },
-      {
-        "Id": 4,
-        "Key": 0,
-        "HPPercent": 0,
-        "Enabled": false
-      },
-      {
-        "Id": 5,
-        "Key": 0,
-        "HPPercent": 0,
-        "Enabled": false
-      }
-    ],
-    "Delay": 50,
-    "StopOnCriticalInjury": false,
-    "ActionName": "AutopotHP"
+  "Autopot": "{\"hpKey\":91,\"hpPercent\":80,\"spKey\":0,\"spPercent\":0,\"delay\":15,\"delayYgg\":50,\"actionName\":\"Autopot\"}",
+  "AutopotYgg": "{\"hpKey\":90,\"hpPercent\":60,\"spKey\":0,\"spPercent\":0,\"delay\":15,\"delayYgg\":50,\"actionName\":\"AutopotYgg\"}",
+  "AutoRefreshSpammer1": {
+    "ActionName": "AutoRefreshSpammer01",
+    "RefreshDelay": 5,
+    "RefreshKey": 0
   },
-  "AutopotSP": {
-    "SPSlots": [
-      {
-        "Id": 1,
-        "Key": 0,
-        "SPPercent": 0,
-        "Enabled": false
-      },
-      {
-        "Id": 2,
-        "Key": 0,
-        "SPPercent": 0,
-        "Enabled": false
-      },
-      {
-        "Id": 3,
-        "Key": 0,
-        "SPPercent": 0,
-        "Enabled": false
-      },
-      {
-        "Id": 4,
-        "Key": 0,
-        "SPPercent": 0,
-        "Enabled": false
-      },
-      {
-        "Id": 5,
-        "Key": 0,
-        "SPPercent": 0,
-        "Enabled": false
-      }
-    ],
-    "Delay": 50,
-    "ActionName": "AutopotSP"
+  "AutoRefreshSpammer2": {
+    "ActionName": "AutoRefreshSpammer02",
+    "RefreshDelay": 5,
+    "RefreshKey": 0
   },
-  "SkillTimer": {
-    "skillTimer": {
-      "1": {
-        "Key": 0,
-        "AltKey": false,
-        "Enabled": false,
-        "Delay": 1000,
-        "ClickMode": 0
-      },
-      "2": {
-        "Key": 0,
-        "AltKey": false,
-        "Enabled": false,
-        "Delay": 1000,
-        "ClickMode": 0
-      },
-      "3": {
-        "Key": 0,
-        "AltKey": false,
-        "Enabled": false,
-        "Delay": 1000,
-        "ClickMode": 0
-      },
-      "4": {
-        "Key": 0,
-        "AltKey": false,
-        "Enabled": false,
-        "Delay": 1000,
-        "ClickMode": 0
-      },
-      "5": {
-        "Key": 0,
-        "AltKey": false,
-        "Enabled": false,
-        "Delay": 1000,
-        "ClickMode": 0
-      },
-      "6": {
-        "Key": 0,
-        "AltKey": false,
-        "Enabled": false,
-        "Delay": 1000,
-        "ClickMode": 0
-      },
-      "7": {
-        "Key": 0,
-        "AltKey": false,
-        "Enabled": false,
-        "Delay": 1000,
-        "ClickMode": 0
-      },
-      "8": {
-        "Key": 0,
-        "AltKey": false,
-        "Enabled": false,
-        "Delay": 1000,
-        "ClickMode": 0
-      },
-      "9": {
-        "Key": 0,
-        "AltKey": false,
-        "Enabled": false,
-        "Delay": 1000,
-        "ClickMode": 0
-      },
-      "10": {
-        "Key": 0,
-        "AltKey": false,
-        "Enabled": false,
-        "Delay": 1000,
-        "ClickMode": 0
-      }
-    }
+  "AutoRefreshSpammer3": {
+    "ActionName": "AutoRefreshSpammer03",
+    "RefreshDelay": 5,
+    "RefreshKey": 0
   },
-  "AutobuffSkill": {
-    "ActionName": "AutobuffSkill",
-    "BuffMapping": {},
-    "Delay": 50
-  },
-  "AutobuffItem": {
-    "buffMapping": {},
-    "ActionName": "AutobuffItem",
-    "Delay": 50,
-    "ConsecutiveErrorCount": 0,
-    "LastSuccessfulRead": "2026-05-15T22:36:37.5818131-07:00"
-  },
-  "StatusRecovery": {
-    "Keys": {
-      "Panacea": 0,
-      "RoyalJelly": 0,
-      "GreenPotion": 0
-    },
-    "Delay": 100
-  },
-  "DebuffsRecovery": {
-    "BuffMapping": {},
-    "Delay": 50
-  },
+  "Autobuff": "{\"buffMapping\":{},\"delay\":1}",
+  "StatusRecovery": "{\"buffMapping\":{},\"delay\":1,\"autoStand\":false}",
   "SongMacro": {
-    "ActionName": "SongMacro",
-    "SongRows": [
+    "actionName": "SongMacro2.0",
+    "chainConfigs": [
       {
-        "Id": 1,
-        "TriggerKey": 0,
-        "DaggerKey": 0,
-        "InstrumentKey": 0,
-        "Delay": 100,
-        "SongSequence": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
+        "id": 1,
+        "trigger": 0,
+        "daggerKey": 0,
+        "instrumentKey": 0,
+        "delay": 50,
+        "macroEntries": {},
+        "infinityLoop": false,
+        "infinityLoopOn": false
       },
       {
-        "Id": 2,
-        "TriggerKey": 0,
-        "DaggerKey": 0,
-        "InstrumentKey": 0,
-        "Delay": 100,
-        "SongSequence": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
+        "id": 2,
+        "trigger": 0,
+        "daggerKey": 0,
+        "instrumentKey": 0,
+        "delay": 50,
+        "macroEntries": {},
+        "infinityLoop": false,
+        "infinityLoopOn": false
       },
       {
-        "Id": 3,
-        "TriggerKey": 0,
-        "DaggerKey": 0,
-        "InstrumentKey": 0,
-        "Delay": 100,
-        "SongSequence": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
+        "id": 3,
+        "trigger": 0,
+        "daggerKey": 0,
+        "instrumentKey": 0,
+        "delay": 50,
+        "macroEntries": {},
+        "infinityLoop": false,
+        "infinityLoopOn": false
       },
       {
-        "Id": 4,
-        "TriggerKey": 0,
-        "DaggerKey": 0,
-        "InstrumentKey": 0,
-        "Delay": 100,
-        "SongSequence": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
-      },
-      {
-        "Id": 1,
-        "TriggerKey": 0,
-        "DaggerKey": 0,
-        "InstrumentKey": 0,
-        "Delay": 100,
-        "SongSequence": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
-      },
-      {
-        "Id": 2,
-        "TriggerKey": 0,
-        "DaggerKey": 0,
-        "InstrumentKey": 0,
-        "Delay": 100,
-        "SongSequence": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
-      },
-      {
-        "Id": 3,
-        "TriggerKey": 0,
-        "DaggerKey": 0,
-        "InstrumentKey": 0,
-        "Delay": 100,
-        "SongSequence": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
-      },
-      {
-        "Id": 4,
-        "TriggerKey": 0,
-        "DaggerKey": 0,
-        "InstrumentKey": 0,
-        "Delay": 100,
-        "SongSequence": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
+        "id": 4,
+        "trigger": 0,
+        "daggerKey": 0,
+        "instrumentKey": 0,
+        "delay": 50,
+        "macroEntries": {},
+        "infinityLoop": false,
+        "infinityLoopOn": false
       }
     ]
   },
   "MacroSwitch": {
-    "ActionName": "MacroSwitch",
-    "ChainConfigs": [
+    "actionName": "MacroSwitch2.0",
+    "chainConfigs": [
       {
         "id": 1,
-        "TriggerKey": 0,
-        "macroEntries": [
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          }
-        ]
+        "trigger": 0,
+        "daggerKey": 0,
+        "instrumentKey": 0,
+        "delay": 50,
+        "macroEntries": {},
+        "infinityLoop": false,
+        "infinityLoopOn": false
       },
       {
         "id": 2,
-        "TriggerKey": 0,
-        "macroEntries": [
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          }
-        ]
+        "trigger": 0,
+        "daggerKey": 0,
+        "instrumentKey": 0,
+        "delay": 50,
+        "macroEntries": {},
+        "infinityLoop": false,
+        "infinityLoopOn": false
       },
       {
         "id": 3,
-        "TriggerKey": 0,
-        "macroEntries": [
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          }
-        ]
+        "trigger": 0,
+        "daggerKey": 0,
+        "instrumentKey": 0,
+        "delay": 50,
+        "macroEntries": {},
+        "infinityLoop": false,
+        "infinityLoopOn": false
       },
       {
         "id": 4,
-        "TriggerKey": 0,
-        "macroEntries": [
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          },
-          {
-            "Key": 0,
-            "Delay": 100,
-            "ClickMode": 0
-          }
-        ]
-      }
-    ]
-  },
-  "TransferHelper": {
-    "ActionName": "TransferHelper",
-    "TransferKey": 0
-  },
-  "ATKDEFMode": {
-    "EquipConfigs": [
-      {
-        "id": 1,
-        "KeySpammerDelay": 100,
-        "SwitchDelay": 100,
-        "KeySpammer": 0,
-        "KeySpammerWithClick": true,
-        "DefKeys": {},
-        "AtkKeys": {}
+        "trigger": 0,
+        "daggerKey": 0,
+        "instrumentKey": 0,
+        "delay": 50,
+        "macroEntries": {},
+        "infinityLoop": false,
+        "infinityLoopOn": false
       },
       {
-        "id": 2,
-        "KeySpammerDelay": 100,
-        "SwitchDelay": 100,
-        "KeySpammer": 0,
-        "KeySpammerWithClick": true,
-        "DefKeys": {},
-        "AtkKeys": {}
+        "id": 5,
+        "trigger": 0,
+        "daggerKey": 0,
+        "instrumentKey": 0,
+        "delay": 50,
+        "macroEntries": {},
+        "infinityLoop": false,
+        "infinityLoopOn": false
       }
     ]
-  }
+  },
+  "AtkDefMode": {
+    "ahkDelay": 10,
+    "switchDelay": 50,
+    "keySpammer": 0,
+    "keySpammerWithClick": true,
+    "defKeys": {},
+    "atkKeys": {}
+  },
+  "DebuffsRecovery": "{\"buffMapping\":{},\"delay\":1}",
+  "AutoRefreshSpammer03": "{\"ActionName\":\"AutoRefreshSpammer03\",\"RefreshDelay\":5000,\"RefreshKey\":0}",
+  "AutoRefreshSpammer02": "{\"ActionName\":\"AutoRefreshSpammer02\",\"RefreshDelay\":5000,\"RefreshKey\":0}",
+  "AutoRefreshSpammer01": "{\"ActionName\":\"AutoRefreshSpammer01\",\"RefreshDelay\":5000,\"RefreshKey\":0}",
+  "AHK20": "{\"AhkEntries\":{\"chkF1\":{\"key\":90,\"ClickActive\":true},\"chkF2\":{\"key\":91,\"ClickActive\":true}},\"AhkDelay\":10,\"mouseFlick\":false,\"noShift\":false,\"ahkMode\":\"ahkCompatibility\"}",
+  "SongMacro2.0": "{\"actionName\":\"SongMacro2.0\",\"chainConfigs\":[{\"id\":1,\"trigger\":0,\"daggerKey\":0,\"instrumentKey\":0,\"delay\":50,\"macroEntries\":{\"in8mac1\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in7mac1\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in6mac1\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in5mac1\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in4mac1\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in3mac1\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in2mac1\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in1mac1\":{\"key\":0,\"delay\":50,\"hasClick\":false}},\"infinityLoop\":false,\"infinityLoopOn\":false},{\"id\":2,\"trigger\":0,\"daggerKey\":0,\"instrumentKey\":0,\"delay\":50,\"macroEntries\":{\"in8mac2\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in7mac2\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in6mac2\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in5mac2\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in4mac2\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in3mac2\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in2mac2\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in1mac2\":{\"key\":0,\"delay\":50,\"hasClick\":false}},\"infinityLoop\":false,\"infinityLoopOn\":false},{\"id\":3,\"trigger\":0,\"daggerKey\":0,\"instrumentKey\":0,\"delay\":50,\"macroEntries\":{\"in8mac3\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in7mac3\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in6mac3\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in5mac3\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in4mac3\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in3mac3\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in2mac3\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in1mac3\":{\"key\":0,\"delay\":50,\"hasClick\":false}},\"infinityLoop\":false,\"infinityLoopOn\":false},{\"id\":4,\"trigger\":0,\"daggerKey\":0,\"instrumentKey\":0,\"delay\":50,\"macroEntries\":{\"in8mac4\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in7mac4\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in6mac4\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in5mac4\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in4mac4\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in3mac4\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in2mac4\":{\"key\":0,\"delay\":50,\"hasClick\":false},\"in1mac4\":{\"key\":0,\"delay\":50,\"hasClick\":false}},\"infinityLoop\":false,\"infinityLoopOn\":false}]}",
+  "ATKDEFMode": "{\"ahkDelay\":10,\"switchDelay\":50,\"keySpammer\":0,\"keySpammerWithClick\":true,\"defKeys\":{},\"atkKeys\":{}}",
+  "MacroSwitch2.0": "{\"actionName\":\"MacroSwitch2.0\",\"chainConfigs\":[{\"id\":1,\"trigger\":0,\"daggerKey\":0,\"instrumentKey\":0,\"delay\":50,\"macroEntries\":{\"in1mac1\":{\"key\":91,\"delay\":150,\"hasClick\":false},\"in2mac1\":{\"key\":92,\"delay\":162,\"hasClick\":false},\"in3mac1\":{\"key\":91,\"delay\":150,\"hasClick\":false},\"in7mac1\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in6mac1\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in5mac1\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in4mac1\":{\"key\":0,\"delay\":0,\"hasClick\":false}},\"infinityLoop\":false,\"infinityLoopOn\":false},{\"id\":2,\"trigger\":0,\"daggerKey\":0,\"instrumentKey\":0,\"delay\":50,\"macroEntries\":{\"in1mac2\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in7mac2\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in6mac2\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in2mac2\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in5mac2\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in3mac2\":{\"key\":0,\"delay\":3,\"hasClick\":false},\"in4mac2\":{\"key\":0,\"delay\":0,\"hasClick\":false}},\"infinityLoop\":false,\"infinityLoopOn\":false},{\"id\":3,\"trigger\":0,\"daggerKey\":0,\"instrumentKey\":0,\"delay\":50,\"macroEntries\":{\"in1mac3\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in7mac3\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in6mac3\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in2mac3\":{\"key\":0,\"delay\":24,\"hasClick\":false},\"in5mac3\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in3mac3\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in4mac3\":{\"key\":0,\"delay\":0,\"hasClick\":false}},\"infinityLoop\":false,\"infinityLoopOn\":false},{\"id\":4,\"trigger\":0,\"daggerKey\":0,\"instrumentKey\":0,\"delay\":50,\"macroEntries\":{\"in1mac4\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in7mac4\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in6mac4\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in2mac4\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in5mac4\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in3mac4\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in4mac4\":{\"key\":0,\"delay\":0,\"hasClick\":false}},\"infinityLoop\":false,\"infinityLoopOn\":false},{\"id\":5,\"trigger\":0,\"daggerKey\":0,\"instrumentKey\":0,\"delay\":50,\"macroEntries\":{\"in1mac5\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in7mac5\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in6mac5\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in2mac5\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in5mac5\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in3mac5\":{\"key\":0,\"delay\":0,\"hasClick\":false},\"in4mac5\":{\"key\":0,\"delay\":0,\"hasClick\":false}},\"infinityLoop\":false,\"infinityLoopOn\":false}]}",
+  "PixelMacro": "{\"rules\":[{\"id\":1,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":2,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":3,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":1,\"name\":\"Poring\",\"enabled\":false,\"red\":255,\"green\":235,\"blue\":205,\"hasColor\":true,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":2,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":3,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":1,\"name\":\"\",\"enabled\":false,\"red\":250,\"green\":115,\"blue\":255,\"hasColor\":true,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":2,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":3,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":1,\"name\":\"\",\"enabled\":true,\"red\":250,\"green\":115,\"blue\":255,\"hasColor\":true,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":2,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":3,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":1,\"name\":\"\",\"enabled\":true,\"red\":250,\"green\":115,\"blue\":255,\"hasColor\":true,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":2,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":3,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":1,\"name\":\"\",\"enabled\":false,\"red\":203,\"green\":251,\"blue\":192,\"hasColor\":true,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":2,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":3,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":1,\"name\":\"\",\"enabled\":true,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":2,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":3,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":1,\"name\":\"\",\"enabled\":true,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":2,\"name\":\"\",\"enabled\":true,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":3,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":1,\"name\":\"\",\"enabled\":true,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":2,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":3,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":1,\"name\":\"\",\"enabled\":true,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":2,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":3,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":1,\"name\":\"\",\"enabled\":true,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":2,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":3,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":1,\"name\":\"\",\"enabled\":true,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":2,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":3,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":1,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":2,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":3,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":1,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":143,\"delay\":250},{\"id\":2,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":3,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":1,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":143,\"delay\":250},{\"id\":2,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":3,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":1,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":2,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":3,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":1,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":143,\"delay\":250},{\"id\":2,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":3,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":1,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":2,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":3,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":1,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":2,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":3,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":1,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":2,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250},{\"id\":3,\"name\":\"\",\"enabled\":false,\"red\":0,\"green\":0,\"blue\":0,\"hasColor\":false,\"tolerance\":10,\"key\":0,\"delay\":250}]}"
 }

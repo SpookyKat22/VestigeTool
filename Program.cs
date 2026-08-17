@@ -1,34 +1,22 @@
-﻿using _ORTools.Utils;
-using System;
-using System.Windows.Forms;
-
-namespace _ORTools
+﻿using System;
+namespace _4RTools
 {
     internal static class Program
     {
+        /// <summary>
+        /// Ponto de entrada principal para o aplicativo.
+        /// </summary>
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            System.Windows.Forms.Application.EnableVisualStyles();
+            System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
+            // Application app = new Application();
+            // app.IsMdiContainer = true;
 
-            try
-            {
-                using (Forms.Container app = new Forms.Container())
-                {
-                    Application.Run(app);
-                }
-            }
-            catch (Exception ex)
-            {
-                DebugLogger.Error("Unhandled exception:\n" + ex.Message);
-                MessageBox.Show("An unexpected error occurred. Please check the logs.", "Application Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                DebugLogger.Info("Application exiting...");
-                Application.Exit();
-            }
+            Forms.ClientUpdaterForm app = new Forms.ClientUpdaterForm();
+            //Forms.Container app = new Forms.Container();
+            System.Windows.Forms.Application.Run(app);
         }
     }
 }

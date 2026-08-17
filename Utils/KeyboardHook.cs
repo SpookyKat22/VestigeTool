@@ -1,34 +1,54 @@
 ﻿using System;
+using System.Windows.Forms;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using System.Windows.Forms;
 
-namespace _ORTools.Utils
+namespace _4RTools.Utils
 {
     public static class KeyboardHook
     {
+        #region interop
+        //This is the Import for the SetWindowsHookEx function.
+        //Use this function to install a thread-specific hook.
+        [DllImport("user32.dll", CharSet = CharSet.Auto,
+         CallingConvention = CallingConvention.StdCall)]
+        internal static extern IntPtr SetWindowsHookEx(int idHook, HookProc lpfn,
+        IntPtr hInstance, int threadId);
+
+        [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        internal static extern IntPtr GetModuleHandle(string lpModuleName);
+
+        //This is the Import for the CallNextHookEx function.
+        //Use this function to pass the hook information to the next hook procedure in chain.
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        internal static extern IntPtr CallNextHookEx(IntPtr hhk, int nCode,
+            IntPtr wParam, IntPtr lParam);
+
+        //This is the Import for the UnhookWindowsHookEx function.
+        //Call this function to uninstall the hook.
+        [DllImport("user32.dll", CharSet = CharSet.Auto,
+         CallingConvention = CallingConvention.StdCall)]
+        internal static extern bool UnhookWindowsHookEx(IntPtr idHook);
+        #endregion
+
         public delegate IntPtr HookProc(int nCode, IntPtr wParam, IntPtr lParam);
 
         private static IntPtr hHook = IntPtr.Zero;
-
         //Delegate that points to the filter function
-        private static readonly HookProc hookproc = new HookProc(Filter);
+        private static HookProc hookproc = new HookProc(Filter);
 
         /// <summary>
         /// Check to see if either Control modifier is active.
         /// </summary>
         public static bool Control = false;
-
         /// <summary>
         /// Check to see if either Shift modifier is active.
         /// </summary>
         public static bool Shift = false;
-
         /// <summary>
         /// Check to see if either Alt modifier is active.
         /// </summary>
         public static bool Alt = false;
-
         /// <summary>
         /// Check to see if either Win modifier is active.
         /// </summary>
@@ -43,7 +63,6 @@ namespace _ORTools.Utils
         /// Keys handled and their callbacks
         /// </summary>
         private static System.Collections.Generic.Dictionary<Keys, KeyPressed> handledKeysDown = new System.Collections.Generic.Dictionary<Keys, KeyPressed>();
-
         private static System.Collections.Generic.Dictionary<Keys, KeyPressed> handledKeysUp = new System.Collections.Generic.Dictionary<Keys, KeyPressed>();
 
         /// <summary>
@@ -77,7 +96,7 @@ namespace _ORTools.Utils
                 {
                     using (Process curProcess = Process.GetCurrentProcess())
                     using (ProcessModule curModule = curProcess.MainModule)
-                        hHook = Win32Interop.SetWindowsHookEx(Constants.WH_KEYBOARD_LL, hookproc, Win32Interop.GetModuleHandle(curModule.ModuleName), 0);
+                        hHook = SetWindowsHookEx((int)Constants.WH_KEYBOARD_LL, hookproc, GetModuleHandle(curModule.ModuleName), 0);
                     Enabled = true;
                     return true;
                 }
@@ -90,7 +109,6 @@ namespace _ORTools.Utils
             else
                 return false;
         }
-
         /// <summary>
         /// Disable keyboard hooking.
         /// </summary>
@@ -101,7 +119,7 @@ namespace _ORTools.Utils
             {
                 try
                 {
-                    Win32Interop.UnhookWindowsHookEx(hHook);
+                    UnhookWindowsHookEx(hHook);
                     Enabled = false;
                     return true;
                 }
@@ -161,7 +179,7 @@ namespace _ORTools.Utils
                 }
             }
 
-            return result ? Win32Interop.CallNextHookEx(hHook, nCode, wParam, lParam) : new IntPtr(1);
+            return result ? CallNextHookEx(hHook, nCode, wParam, lParam) : new IntPtr(1);
         }
 
         /// <summary>
@@ -265,6 +283,5 @@ namespace _ORTools.Utils
                             (KeyboardHook.Win ? "Win + " : "") +
                             key.ToString();
         }
-
     }
 }
