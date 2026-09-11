@@ -22,6 +22,7 @@ namespace _4RTools.Wpf
             Height = 735;
             MinWidth = 716;
             MinHeight = 735;
+            ResizeMode = ResizeMode.CanMinimize;
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
             Background = new SolidColorBrush(Color.FromRgb(248, 251, 253));
             SetWindowIcon();

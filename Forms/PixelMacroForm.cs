@@ -10,19 +10,22 @@ namespace _4RTools.Forms
 {
     public class PixelMacroForm : Form, IObserver
     {
-        private const int TotalRules = 3;
+        private const int TotalRules = 4;
         private bool loading;
+        private bool sessionActive;
 
         public PixelMacroForm(Subject subject)
         {
+            loading = true;
             InitializeComponent();
+            loading = false;
             subject.Attach(this);
         }
 
         private void InitializeComponent()
         {
-            this.BackColor = Color.FromArgb(226, 241, 252);
-            this.ClientSize = new Size(563, 274);
+            this.BackColor = Color.FromArgb(242, 248, 252);
+            this.ClientSize = new Size(563, 330);
             this.FormBorderStyle = FormBorderStyle.None;
             this.Name = "PixelMacroForm";
             this.Text = "PixelMacroForm";
@@ -30,19 +33,121 @@ namespace _4RTools.Forms
             AddHeader();
             for (int i = 1; i <= TotalRules; i++)
             {
-                AddRuleRow(i, 34 + ((i - 1) * 38));
+                int ruleId = i == 1 ? 4 : i == 2 ? 2 : i == 3 ? 1 : 3;
+                AddRuleRow(ruleId, 67 + ((i - 1) * 29));
             }
+            AddDetectionSettings();
+            AddLabel("Keep the game in front. The cursor stays at the clicked target.", 20, 302, false);
+
+            Control[] controls = new Control[this.Controls.Count];
+            this.Controls.CopyTo(controls, 0);
+            foreach (Control control in controls)
+            {
+                if (control is Panel)
+                {
+                    control.SendToBack();
+                }
+            }
+        }
+
+        private void AddDetectionSettings()
+        {
+            Label automaticArea = new Label
+            {
+                AutoSize = true,
+                Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold),
+                ForeColor = Color.FromArgb(39, 121, 169),
+                Location = new Point(22, 190),
+                Text = "Search: entire client; Evade: centered 1/4 width and height"
+            };
+            this.Controls.Add(automaticArea);
+
+            AddLabel("Block", 22, 218, true);
+            NumericUpDown block = NewSettingNumber("numPixelBlockSize", 66, 214, 64, 55);
+            block.Minimum = 1;
+            block.Maximum = 32;
+            block.Value = 4;
+
+            AddLabel("Scan ms", 139, 218, true);
+            NumericUpDown scan = NewSettingNumber("numPixelScanDelay", 198, 214, 60000, 70);
+            scan.Minimum = 10;
+            scan.Value = 10;
+
+            AddLabel("MACRO KEY (Flywing / Teleport)", 22, 267, true);
+            TextBox followUpKey = new TextBox
+            {
+                Name = "txtPixelFollowUpKey",
+                Font = new Font("Segoe UI", 8.5F),
+                BackColor = Color.White,
+                ForeColor = Color.FromArgb(30, 80, 118),
+                Location = new Point(215, 262),
+                Size = new Size(110, 25),
+                Text = Key.None.ToString(),
+                TextAlign = HorizontalAlignment.Center
+            };
+            followUpKey.KeyDown += FormUtils.OnKeyDown;
+            followUpKey.KeyPress += FormUtils.OnKeyPress;
+            followUpKey.TextChanged += onSettingsChanged;
+            this.Controls.Add(followUpKey);
+
+            CheckBox macroEnabled = new CheckBox
+            {
+                Name = "chkPixelMacroEnabled",
+                AutoSize = true,
+                Font = new Font("Segoe UI Semibold", 8.5F, FontStyle.Bold),
+                ForeColor = Color.FromArgb(30, 80, 118),
+                Location = new Point(365, 264),
+                Checked = false,
+                Text = "Pixel Macro ON"
+            };
+            macroEnabled.CheckedChanged += onSettingsChanged;
+            this.Controls.Add(macroEnabled);
+        }
+
+        private NumericUpDown NewSettingNumber(string name, int x, int y, int max, int width)
+        {
+            NumericUpDown input = NewNumber(name, x, y, max, width);
+            input.ValueChanged -= onRuleChanged;
+            input.ValueChanged += onSettingsChanged;
+            this.Controls.Add(input);
+            return input;
         }
 
         private void AddHeader()
         {
-            AddLabel("On", 14, 10, true);
-            AddLabel("Color", 54, 10, true);
-            AddLabel("Tol", 145, 10, true);
-            AddLabel("Key", 210, 10, true);
-            AddLabel("Delay", 292, 10, true);
-            AddLabel("Tools", 384, 10, true);
-            AddLabel("Name", 493, 10, true);
+            AddCard(10, 38, 543, 144);
+            AddCard(10, 187, 543, 60);
+            AddCard(10, 254, 543, 40);
+
+            Label title = new Label
+            {
+                AutoSize = true,
+                Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold),
+                ForeColor = Color.FromArgb(30, 80, 118),
+                Location = new Point(12, 8),
+                Text = "Pixel Macro"
+            };
+            this.Controls.Add(title);
+
+            AddLabel("ON", 22, 47, true);
+            AddLabel("TARGET COLOR", 54, 47, true);
+            AddLabel("TOL", 145, 47, true);
+            AddLabel("CLICK DELAY", 210, 47, true);
+            AddLabel("COLOR TOOLS", 302, 47, true);
+            AddLabel("RULE NAME", 411, 47, true);
+        }
+
+        private void AddCard(int x, int y, int width, int height)
+        {
+            Panel card = new Panel
+            {
+                BackColor = Color.White,
+                BorderStyle = BorderStyle.FixedSingle,
+                Location = new Point(x, y),
+                Size = new Size(width, height)
+            };
+            this.Controls.Add(card);
+            card.SendToBack();
         }
 
         private void AddRuleRow(int id, int y)
@@ -61,36 +166,24 @@ namespace _4RTools.Forms
                 Font = new Font("Segoe UI", 8.5F),
                 Location = new Point(50, y),
                 Size = new Size(74, 23),
-                Text = "#000000",
+                Text = id == 1 ? "#394ACE" : id == 2 ? "#FF0000" : id == 3 ? "#537559" : "#FFF700",
                 TextAlign = HorizontalAlignment.Center
             };
             colorInput.TextChanged += onRuleChanged;
 
-            NumericUpDown toleranceInput = NewNumber($"numPixelTolerance{id}", 138, y, 255, 48);
-            toleranceInput.Value = 10;
+            NumericUpDown toleranceInput = NewNumber($"numPixelTolerance{id}", 138, y, 5, 48);
+            toleranceInput.Value = 5;
 
-            TextBox keyInput = new TextBox
-            {
-                Name = $"txtPixelKey{id}",
-                Font = new Font("Segoe UI", 8.5F),
-                Location = new Point(198, y),
-                Size = new Size(70, 23),
-                Text = Key.None.ToString(),
-                TextAlign = HorizontalAlignment.Center
-            };
-            keyInput.KeyDown += FormUtils.OnKeyDown;
-            keyInput.KeyPress += FormUtils.OnKeyPress;
-            keyInput.TextChanged += onRuleChanged;
+            NumericUpDown delayInput = NewNumber($"numPixelDelay{id}", 198, y, 60000, 74);
+            delayInput.Increment = 10;
+            delayInput.Value = 50;
+            if (id == 4) { delayInput.Value = 500; delayInput.Enabled = false; }
 
-            NumericUpDown delayInput = NewNumber($"numPixelDelay{id}", 286, y, 60000, 74);
-            delayInput.Increment = 50;
-            delayInput.Value = 250;
-
-            Button colorButton = NewButton($"btnPixelColor{id}", "Color", 378, y - 1, 50);
+            Button colorButton = NewButton($"btnPixelColor{id}", "Color", 290, y - 1, 50);
             colorButton.Tag = id;
             colorButton.Click += onColorClick;
 
-            Button pickButton = NewButton($"btnPixelPick{id}", "Pick", 434, y - 1, 46);
+            Button pickButton = NewButton($"btnPixelPick{id}", "Pick", 346, y - 1, 46);
             pickButton.Tag = id;
             pickButton.Click += onPickClick;
 
@@ -98,16 +191,18 @@ namespace _4RTools.Forms
             {
                 Name = $"txtPixelName{id}",
                 Font = new Font("Segoe UI", 8.5F),
-                Location = new Point(486, y),
-                Size = new Size(70, 23),
+                Location = new Point(398, y),
+                Size = new Size(158, 23),
+                Text = id == 1 ? "Attack Pixel" : id == 2 ? "Evade Pixel" : id == 3 ? "8-second Pixel" : "Map Pixel",
+                ReadOnly = true,
+                TabStop = false,
+                BackColor = Color.FromArgb(242, 248, 252),
                 TextAlign = HorizontalAlignment.Center
             };
-            nameInput.TextChanged += onRuleChanged;
 
             this.Controls.Add(enabled);
             this.Controls.Add(colorInput);
             this.Controls.Add(toleranceInput);
-            this.Controls.Add(keyInput);
             this.Controls.Add(delayInput);
             this.Controls.Add(colorButton);
             this.Controls.Add(pickButton);
@@ -134,7 +229,9 @@ namespace _4RTools.Forms
             {
                 BackColor = Color.White,
                 FlatStyle = FlatStyle.Flat,
-                Font = new Font("Segoe UI", 8.25F),
+                FlatAppearance = { BorderColor = Color.FromArgb(179, 205, 222) },
+                Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold),
+                ForeColor = Color.FromArgb(30, 80, 118),
                 Location = new Point(x, y),
                 Name = name,
                 Size = new Size(width, 25),
@@ -163,9 +260,11 @@ namespace _4RTools.Forms
                     updateUi();
                     break;
                 case MessageCode.TURN_ON:
+                    sessionActive = true;
                     ProfileSingleton.GetCurrent().PixelMacro.Start();
                     break;
                 case MessageCode.TURN_OFF:
+                    sessionActive = false;
                     ProfileSingleton.GetCurrent().PixelMacro.Stop();
                     break;
             }
@@ -182,13 +281,51 @@ namespace _4RTools.Forms
                 if (rule.id > TotalRules) { continue; }
                 Find<CheckBox>($"chkPixel{rule.id}").Checked = rule.enabled;
                 Find<TextBox>($"txtPixelColor{rule.id}").Text = ColorToHex(rule);
-                Find<NumericUpDown>($"numPixelTolerance{rule.id}").Value = Clamp(rule.tolerance, 0, 255);
-                Find<TextBox>($"txtPixelKey{rule.id}").Text = rule.key.ToString();
+                rule.tolerance = Math.Min(rule.tolerance, 5);
+                Find<NumericUpDown>($"numPixelTolerance{rule.id}").Value = Clamp(rule.tolerance, 0, 5);
+                rule.delay = rule.id == 4 ? 500 : Math.Min(rule.delay, 50);
                 Find<NumericUpDown>($"numPixelDelay{rule.id}").Value = Clamp(rule.delay, 0, 60000);
                 Find<TextBox>($"txtPixelName{rule.id}").Text = rule.name ?? "";
             }
 
+            pixelMacro.useSearchArea = false;
+            Find<NumericUpDown>("numPixelBlockSize").Value = Clamp(pixelMacro.blockSize, 1, 32);
+            pixelMacro.scanDelay = Math.Min(pixelMacro.scanDelay, 10);
+            Find<NumericUpDown>("numPixelScanDelay").Value = Clamp(pixelMacro.scanDelay, 10, 60000);
+            Find<TextBox>("txtPixelFollowUpKey").Text = pixelMacro.followUpKey.ToString();
+            Find<CheckBox>("chkPixelMacroEnabled").Checked = pixelMacro.enabled;
+
             loading = false;
+        }
+
+        private void onSettingsChanged(object sender, EventArgs e)
+        {
+            if (loading) { return; }
+
+            PixelMacro pixelMacro = ProfileSingleton.GetCurrent().PixelMacro;
+            pixelMacro.enabled = Find<CheckBox>("chkPixelMacroEnabled").Checked;
+            pixelMacro.useSearchArea = false;
+            pixelMacro.blockSize = Convert.ToInt32(Find<NumericUpDown>("numPixelBlockSize").Value);
+            pixelMacro.scanDelay = Convert.ToInt32(Find<NumericUpDown>("numPixelScanDelay").Value);
+            Key followUpKey;
+            if (Enum.TryParse(Find<TextBox>("txtPixelFollowUpKey").Text, out followUpKey))
+            {
+                pixelMacro.followUpKey = followUpKey;
+            }
+            ProfileSingleton.SetConfiguration(pixelMacro);
+
+            Control changedControl = sender as Control;
+            if (changedControl != null && changedControl.Name == "chkPixelMacroEnabled")
+            {
+                if (pixelMacro.enabled && sessionActive)
+                {
+                    pixelMacro.Start();
+                }
+                else
+                {
+                    pixelMacro.Stop();
+                }
+            }
         }
 
         private void onPickClick(object sender, EventArgs e)
@@ -249,7 +386,6 @@ namespace _4RTools.Forms
                 rule.blue = color.B;
                 rule.hasColor = rule.hasColor || markColorConfigured;
                 rule.tolerance = Convert.ToInt32(Find<NumericUpDown>($"numPixelTolerance{id}").Value);
-                rule.key = (Key)Enum.Parse(typeof(Key), Find<TextBox>($"txtPixelKey{id}").Text);
                 rule.delay = Convert.ToInt32(Find<NumericUpDown>($"numPixelDelay{id}").Value);
                 rule.name = Find<TextBox>($"txtPixelName{id}").Text;
 
