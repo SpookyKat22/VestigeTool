@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -6,6 +6,15 @@ namespace _4RTools.Utils
 {
     internal class Interop
     {
+        [DllImport("user32.dll")]
+        public static extern bool IsWindowVisible(IntPtr hWnd);
+
+        [DllImport("user32.dll")]
+        public static extern bool IsIconic(IntPtr hWnd);
+
+        [DllImport("user32.dll")]
+        public static extern bool PrintWindow(IntPtr hWnd, IntPtr hdc, uint flags);
+
         // PINVOKES
         [DllImport("user32.dll", SetLastError = true)]
         public static extern bool PostMessage(IntPtr hWnd, int Msg, Keys wParam, int lParam);
@@ -26,6 +35,12 @@ namespace _4RTools.Utils
         public static extern IntPtr GetForegroundWindow();
 
         [DllImport("user32.dll")]
+        public static extern IntPtr WindowFromPoint(POINT point);
+
+        [DllImport("user32.dll")]
+        public static extern IntPtr GetAncestor(IntPtr hWnd, uint flags);
+
+        [DllImport("user32.dll")]
         public static extern bool GetClientRect(IntPtr hWnd, out RECT lpRect);
 
         [DllImport("user32.dll")]
@@ -34,23 +49,17 @@ namespace _4RTools.Utils
         [DllImport("user32.dll", SetLastError = true)]
         private static extern uint SendInput(uint nInputs, INPUT[] pInputs, int cbSize);
 
+        public static bool SendMouseButton(uint flags)
+        {
+            INPUT[] inputs = { new INPUT { type = 0, mi = new MOUSEINPUT { dwFlags = flags } } };
+            return SendInput(1, inputs, Marshal.SizeOf(typeof(INPUT))) == 1;
+        }
+
         public static void SendLeftMouseClick()
         {
-            INPUT[] inputs = new INPUT[]
-            {
-                new INPUT
-                {
-                    type = Constants.INPUT_MOUSE,
-                    mi = new MOUSEINPUT { dwFlags = Constants.MOUSEEVENTF_LEFTDOWN }
-                },
-                new INPUT
-                {
-                    type = Constants.INPUT_MOUSE,
-                    mi = new MOUSEINPUT { dwFlags = Constants.MOUSEEVENTF_LEFTUP }
-                }
-            };
-
-            SendInput((uint)inputs.Length, inputs, Marshal.SizeOf(typeof(INPUT)));
+            mouse_event(Constants.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+            System.Threading.Thread.Sleep(20);
+            mouse_event(Constants.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
         }
 
         [StructLayout(LayoutKind.Sequential)]
@@ -88,3 +97,4 @@ namespace _4RTools.Utils
         }
     }
 }
+
